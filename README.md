@@ -27,14 +27,14 @@ To do
 - ✓ Extention points
 
 ## LANGAGE
-Case: <<name>> 
-    [ ExtensionPoints: <<extensionPoints>> ]
-    [ Include:  <<includeCase>>  [{ <<rules>> }] ] 
-    [ Extends:  <<extendsCase>>  [{ <<rule>> }] ]
+Case: {{name}} 
+    [ ExtensionPoints: {{extensionPoints}} ]
+    [ Include:  {{includeCase}}  [{ {{rules}} }] ] 
+    [ Extends:  {{extendsCase}}  [{ {{rule}} }] ]
     
-Actor: <<name>>
-    [ Extends: <<actorName>> ]
-    [ Link: <<caseName>> [{multiplicity}] ]
+Actor: {{name}}
+    [ Extends: {{actorName}} ]
+    [ Link: {{caseName} [{multiplicity}] ]
     
 ## EXAMPLE
 
@@ -56,7 +56,7 @@ Case: Register ATM
 Case: Read Log
 
 Actor: Person
-    Link: {*,0..1} Withdraw
+    Link: Withdraw {*,0..1} 
     
 Actor: Customer extends Person
     Link: Transfer
