@@ -16,7 +16,7 @@ To do
 
 ### Vocabulaire
 
-- Subsystem
+- ✓ Subsystem
 - ✓ Actors 
 - ✓ Inheritance (actor -> actor)
 - ✓ Use Case
