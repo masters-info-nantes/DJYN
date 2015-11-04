@@ -16,12 +16,51 @@ To do
 
 ### Vocabulaire
 
-- Systeme
-- Acteurs
-- Héritage (acteur -> acteur)
-- Cas d'utilisation
-- Associations ( acteur -> cas d'utilisation)
-- Multiplicity
-- Liens entre cas (extend,include)
-- Rêgle (Liens entre cas)
-- Extention points
+- Systeme (Ne pas modéliser, c'est un composant)
+- ✓ Acteurs 
+- ✓ Héritage (acteur -> acteur)
+- ✓ Cas d'utilisation
+- ✓ Associations ( acteur -> cas d'utilisation)
+- ✓ Multiplicity
+- ✓ Liens entre cas (extend,include)
+- ✓ Rêgle (Liens entre cas)
+- ✓ Extention points
+
+## LANGAGE
+Case: <<name>> 
+    [ ExtensionPoints: <<extensionPoints>> ]
+    [ Include:  <<includeCase>>  [{ <<rules>> }] ] 
+    [ Extends:  <<extendsCase>>  [{ <<rule>> }] ]
+    
+Actor: <<name>>
+    [ Extends: <<actorName>> ]
+    [ Link: <<caseName>> [{multiplicity}] ]
+    
+## EXAMPLE
+
+Case: Authenticate
+
+Case: Consult 
+    Include: Authenticate {customer selected HELP}
+    
+Case: Withdraw 
+    Extends: Consult
+    
+Case: Transfer
+    Extends: Consult
+    
+Case: Deposit
+
+Case: Register ATM
+
+Case: Read Log
+
+Actor: Person
+    Link: {*,0..1} Withdraw
+    
+Actor: Customer extends Person
+    Link: Transfer
+    
+Actor: Administrator
+Actor: Bank
+
