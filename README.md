@@ -2,9 +2,9 @@
 ## METADATA
 ### Goals
 
-1 - écrire le language
-2 - écrire un parser du langage
-3 - Générer des diagrammes à partir du langage
+1. écrire le language
+2. écrire un parser du langage
+3. Générer des diagrammes à partir du langage
 
 ### Dates
 
@@ -24,3 +24,4 @@ To do
 - Multiplicity
 - Liens entre cas (extend,include)
 - Rêgle (Liens entre cas)
+- Extention points
