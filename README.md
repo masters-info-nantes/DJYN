@@ -26,7 +26,11 @@ To do
 - ✓ Rêgle (Liens entre cas)
 - ✓ Extention points
 
+
 ## LANGAGE
+
+```
+
 Case: {{name}} 
     [ ExtensionPoints: {{extensionPoints}} ]
     [ Include:  {{includeCase}}  [{ {{rules}} }] ] 
@@ -35,6 +39,10 @@ Case: {{name}}
 Actor: {{name}}
     [ Extends: {{actorName}} ]
     [ Link: {{caseName} [{multiplicity}] ]
+    
+```
+    
+    
     
 ## EXAMPLE
 
