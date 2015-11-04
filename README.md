@@ -16,15 +16,15 @@ To do
 
 ### Vocabulaire
 
-- Systeme (Ne pas modéliser, c'est un composant)
-- ✓ Acteurs 
-- ✓ Héritage (acteur -> acteur)
-- ✓ Cas d'utilisation
-- ✓ Associations ( acteur -> cas d'utilisation)
+- Subsystem
+- ✓ Actors 
+- ✓ Inheritance (actor -> actor)
+- ✓ Use Case
+- ✓ Associations ( actor -> use case)
 - ✓ Multiplicity
-- ✓ Liens entre cas (extend,include)
-- ✓ Rêgle (Liens entre cas)
-- ✓ Extention points
+- ✓ Links between cases (extend,include)
+- ✓ Rules (Links between cases)
+- ✓ Extension points
 
 
 ## LANGAGE
@@ -33,12 +33,12 @@ To do
 
 Case: {{name}} 
     [ ExtensionPoints: {{extensionPoints}} ]
-    [ Include:  {{includeCase}}  [{ {{rules}} }] ] 
+    [ Includes:  {{includeCase}}  [{ {{rules}} }] ] 
     [ Extends:  {{extendsCase}}  [{ {{rule}} }] ]
     
 Actor: {{name}}
     [ Extends: {{actorName}} ]
-    [ Link: {{caseName} [{multiplicity}] ]
+    [ Uses: {{caseName}} [{multiplicity}] ]
     
 ```
     
@@ -46,29 +46,23 @@ Actor: {{name}}
     
 ## EXAMPLE
 
+```
 Case: Authenticate
-
 Case: Consult 
-    Include: Authenticate {customer selected HELP}
-    
+    Includes: Authenticate {customer selected HELP}
 Case: Withdraw 
     Extends: Consult
-    
 Case: Transfer
     Extends: Consult
-    
 Case: Deposit
-
 Case: Register ATM
-
 Case: Read Log
 
 Actor: Person
-    Link: Withdraw {*,0..1} 
-    
+    Uses: Withdraw {*,0..1} 
 Actor: Customer extends Person
-    Link: Transfer
-    
+    Uses: Transfer
 Actor: Administrator
 Actor: Bank
 
+```
