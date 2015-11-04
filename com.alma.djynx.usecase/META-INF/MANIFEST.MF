@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.alma.djynx.usecase
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.alma.djynx.usecase; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: com.alma.djynx.usecase,
+ com.alma.djynx.usecase.services,
+ com.alma.djynx.usecase.useCase,
+ com.alma.djynx.usecase.useCase.impl,
+ com.alma.djynx.usecase.useCase.util,
+ com.alma.djynx.usecase.serializer,
+ com.alma.djynx.usecase.parser.antlr,
+ com.alma.djynx.usecase.parser.antlr.internal,
+ com.alma.djynx.usecase.validation,
+ com.alma.djynx.usecase.scoping,
+ com.alma.djynx.usecase.generator,
+ com.alma.djynx.usecase.formatting

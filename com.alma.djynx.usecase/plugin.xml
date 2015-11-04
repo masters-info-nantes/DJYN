@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.alma.com/djynx/usecase/UseCase" 
+       class = "com.alma.djynx.usecase.useCase.UseCasePackage"
+       genModel = "model/generated/UseCase.genmodel" /> 
+	
+  </extension>
+
+
+
+</plugin>

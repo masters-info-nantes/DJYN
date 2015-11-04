@@ -1,0 +1,57 @@
+grammar com.alma.djynx.usecase.UseCase with org.eclipse.xtext.common.Terminals
+
+generate useCase "http://www.alma.com/djynx/usecase/UseCase"
+
+UseCase :
+	(systems += Subsystem)*
+	(actors += Actor)*
+;
+Subsystem :
+	'Subsystem: ' name=ID
+  	(cases += Case)*
+;
+
+Case:
+	'Case: ' name=ID
+	(extensions += ExtensionPoint)*
+	(includes += Includes)*
+	(extends += Extends)*
+;
+
+ExtensionPoint:
+	'ExtensionPoint: ' name=ID
+;
+
+Includes:
+	'Includes: ' name=ID '{' (rules+=ID)* '}'
+;
+
+Extends:
+	'Extends: ' name=ID '{' (rules+=ID)* '}'
+;
+
+Actor:
+	'Actor: ' name=ID
+	(inheritances += Inheritance)*
+	(uses += Uses)*
+;
+
+Inheritance:
+	'Extends: ' name=ID	
+;
+
+Uses:
+	'Uses: ' name=ID (multiplicity = Multiplicity)?
+;
+
+Multiplicity:
+	'{' Number | Star (',' Number | Star)? '}'
+;
+
+Number:
+	('0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9')*
+;
+
+Star:
+	'*'
+;

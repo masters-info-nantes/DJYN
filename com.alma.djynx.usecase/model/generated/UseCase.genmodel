@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.alma.djynx.usecase/src-gen" editDirectory="/com.alma.djynx.usecase.edit/src"
+    editorDirectory="/com.alma.djynx.usecase.editor/src" modelPluginID="com.alma.djynx.usecase"
+    forceOverwrite="true" modelName="UseCase" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="com.alma.djynx.usecase.edit"
+    editorPluginID="com.alma.djynx.usecase.editor" runtimeVersion="2.10">
+  <genPackages prefix="UseCase" basePackage="com.alma.djynx.usecase" disposableProviderFactory="true"
+      fileExtensions="uc" ecorePackage="UseCase.ecore#/">
+    <genClasses ecoreClass="UseCase.ecore#//UseCase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//UseCase/systems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//UseCase/actors"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Subsystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Subsystem/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//Subsystem/cases"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Case">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Case/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//Case/extensions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//Case/includes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//Case/extends"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//ExtensionPoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//ExtensionPoint/name"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Includes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Includes/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Includes/rules"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Extends">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Extends/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Extends/rules"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Actor/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//Actor/inheritances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UseCase.ecore#//Actor/uses"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Inheritance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Inheritance/name"/>
+    </genClasses>
+    <genClasses ecoreClass="UseCase.ecore#//Uses">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Uses/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UseCase.ecore#//Uses/multiplicity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
