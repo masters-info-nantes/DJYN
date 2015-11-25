@@ -128,7 +128,7 @@ public class InternalUseCaseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUseCase"
-    // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:76:1: ruleUseCase returns [EObject current=null] : ( ( (lv_systems_0_0= ruleSubsystem ) )* ( (lv_actors_1_0= ruleActor ) )* ) ;
+    // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:76:1: ruleUseCase returns [EObject current=null] : ( ( (lv_systems_0_0= ruleSubsystem ) )+ ( (lv_actors_1_0= ruleActor ) )* ) ;
     public final EObject ruleUseCase() throws RecognitionException {
         EObject current = null;
 
@@ -140,13 +140,14 @@ public class InternalUseCaseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:79:28: ( ( ( (lv_systems_0_0= ruleSubsystem ) )* ( (lv_actors_1_0= ruleActor ) )* ) )
-            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:1: ( ( (lv_systems_0_0= ruleSubsystem ) )* ( (lv_actors_1_0= ruleActor ) )* )
+            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:79:28: ( ( ( (lv_systems_0_0= ruleSubsystem ) )+ ( (lv_actors_1_0= ruleActor ) )* ) )
+            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:1: ( ( (lv_systems_0_0= ruleSubsystem ) )+ ( (lv_actors_1_0= ruleActor ) )* )
             {
-            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:1: ( ( (lv_systems_0_0= ruleSubsystem ) )* ( (lv_actors_1_0= ruleActor ) )* )
-            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:2: ( (lv_systems_0_0= ruleSubsystem ) )* ( (lv_actors_1_0= ruleActor ) )*
+            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:1: ( ( (lv_systems_0_0= ruleSubsystem ) )+ ( (lv_actors_1_0= ruleActor ) )* )
+            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:2: ( (lv_systems_0_0= ruleSubsystem ) )+ ( (lv_actors_1_0= ruleActor ) )*
             {
-            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:2: ( (lv_systems_0_0= ruleSubsystem ) )*
+            // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:80:2: ( (lv_systems_0_0= ruleSubsystem ) )+
+            int cnt1=0;
             loop1:
             do {
                 int alt1=2;
@@ -191,8 +192,12 @@ public class InternalUseCaseParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop1;
+            	    if ( cnt1 >= 1 ) break loop1;
+                        EarlyExitException eee =
+                            new EarlyExitException(1, input);
+                        throw eee;
                 }
+                cnt1++;
             } while (true);
 
             // ../com.alma.djynx.usecase/src-gen/com/alma/djynx/usecase/parser/antlr/internal/InternalUseCase.g:98:3: ( (lv_actors_1_0= ruleActor ) )*

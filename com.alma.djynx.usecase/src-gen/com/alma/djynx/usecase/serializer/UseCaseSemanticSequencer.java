@@ -147,7 +147,7 @@ public class UseCaseSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Constraint:
-	 *     (systems+=Subsystem* actors+=Actor*)
+	 *     (systems+=Subsystem+ actors+=Actor*)
 	 */
 	protected void sequence_UseCase(EObject context, UseCase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

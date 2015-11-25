@@ -3,7 +3,7 @@ grammar com.alma.djynx.usecase.UseCase with org.eclipse.xtext.common.Terminals
 generate useCase "http://www.alma.com/djynx/usecase/UseCase"
 
 UseCase :
-	(systems += Subsystem)*
+	(systems += Subsystem)+
 	(actors += Actor)*
 ;
 Subsystem :

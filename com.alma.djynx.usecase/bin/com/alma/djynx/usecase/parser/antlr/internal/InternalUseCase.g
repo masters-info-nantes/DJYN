@@ -95,7 +95,7 @@ ruleUseCase returns [EObject current=null]
 	    }
 
 )
-)*(
+)+(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getUseCaseAccess().getActorsActorParserRuleCall_1_0()); 

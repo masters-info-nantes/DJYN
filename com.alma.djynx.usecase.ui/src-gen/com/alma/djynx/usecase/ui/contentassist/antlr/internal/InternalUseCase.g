@@ -549,9 +549,16 @@ rule__UseCase__Group__0__Impl
     }
 :
 (
+(
+{ before(grammarAccess.getUseCaseAccess().getSystemsAssignment_0()); }
+(rule__UseCase__SystemsAssignment_0)
+{ after(grammarAccess.getUseCaseAccess().getSystemsAssignment_0()); }
+)
+(
 { before(grammarAccess.getUseCaseAccess().getSystemsAssignment_0()); }
 (rule__UseCase__SystemsAssignment_0)*
 { after(grammarAccess.getUseCaseAccess().getSystemsAssignment_0()); }
+)
 )
 
 ;

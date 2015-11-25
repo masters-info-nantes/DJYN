@@ -27,13 +27,13 @@ public class UseCaseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cActorsActorParserRuleCall_1_0 = (RuleCall)cActorsAssignment_1.eContents().get(0);
 		
 		//UseCase:
-		//	systems+=Subsystem* actors+=Actor*;
+		//	systems+=Subsystem+ actors+=Actor*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//systems+=Subsystem* actors+=Actor*
+		//systems+=Subsystem+ actors+=Actor*
 		public Group getGroup() { return cGroup; }
 
-		//systems+=Subsystem*
+		//systems+=Subsystem+
 		public Assignment getSystemsAssignment_0() { return cSystemsAssignment_0; }
 
 		//Subsystem
@@ -511,7 +511,7 @@ public class UseCaseGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//UseCase:
-	//	systems+=Subsystem* actors+=Actor*;
+	//	systems+=Subsystem+ actors+=Actor*;
 	public UseCaseElements getUseCaseAccess() {
 		return pUseCase;
 	}
