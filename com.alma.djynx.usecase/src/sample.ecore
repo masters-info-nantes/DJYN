@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useCase:UseCase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:useCase="http://www.alma.com/djynx/usecase/UseCase">
+  <systems name="ATM_System">
+    <cases name="Authenticate"/>
+    <cases name="Consult">
+      <includes name="Authenticate">
+        <rules>customer</rules>
+        <rules>selected</rules>
+        <rules>HELP</rules>
+      </includes>
+    </cases>
+    <cases name="Withdraw">
+      <extends name="Consul"/>
+    </cases>
+    <cases name="Transfer">
+      <extends name="Consult"/>
+    </cases>
+    <cases name="Deposit"/>
+    <cases name="RegisterATM"/>
+    <cases name="Read_Log"/>
+  </systems>
+  <actors name="Person"/>
+  <actors name="Customer">
+    <inheritances name="Person"/>
+    <uses name="Transfer"/>
+  </actors>
+  <actors name="Administrator"/>
+  <actors name="Bank"/>
+</useCase:UseCase>

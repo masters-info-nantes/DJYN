@@ -1,0 +1,38 @@
+-- @path MM=/com.alma.djynx.usecase/model/generated/UseCase.ecore
+-- @path MM1=/com.alma.djynx.usecase/src/com/alma/djynx/usecase/UML.ecore
+
+module djynx;
+create OUT : MM1 from IN : MM;
+
+
+rule usecaseTransformation {
+	from
+		case : MM!Case
+	to 
+		usecase2 : MM1!UseCase (
+			name <- case.name,
+			extend <- case.extends,
+			extensionPoint <- case.extensions,
+			include <- case.includes
+		)
+}
+
+
+rule extendTransformation {
+	from
+		extend : MM!Extends
+	to 
+		extend2 : MM1!Extend (
+			name <- extend.name
+		)
+}
+
+
+rule actorTransformation {
+	from
+		act : MM!Actor
+	to 
+		act2 : MM1!Actor (
+			name <- act.name
+		)
+}
